@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# Redireciona URLs do tipo /320x240 ou /800x600 para index.php
+RewriteRule ^([0-9]+)x([0-9]+)$ index.php?width=$1&height=$2 [QSA,L]
+
+# Redireciona URLs do tipo /320x240 ou /800x600 para index.html
+RewriteRule ^([0-9]+)x([0-9]+)$ index.html?width=$1&height=$2 [QSA,L]
